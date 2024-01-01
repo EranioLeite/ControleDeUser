@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Projetos\oqc\back_oqc\Kodigos\src\Kodigos.API\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2022-07-19T18:12:03.0103020Z;True|2022-07-19T14:10:26.5968913-04:00;True|2022-06-27T20:33:52.0234712-04:00;True|2022-06-27T20:27:50.1254234-04:00;True|2022-06-27T19:03:07.7202780-04:00;True|2022-06-27T08:40:31.5264971-04:00;</History>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,35 @@
+<div class="container"> 
+      <div class="title-page">
+        <h3>Listagem de Usuário</h3>
+        <p>Lista de usuários cadastrados no sistema</p>
+      </div>
+      <button [ngStyle]="{'float': 'right', 'padding': '5px 22px;', 'margin-bottom': '20px'}" (click)="novoUser()">Novo usuário</button>
+      <br/>
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              Nome
+            </th>
+            <th>
+              Sobrenome
+            </th>
+            <th>
+              E-mail
+            </th>
+            <th>
+              Ações
+            </th>
+          </tr>
+          <tr *ngFor="let item of user">
+            <td>{{item.nome}}</td>
+            <td>{{item.sobrenome}}</td>
+            <td>{{item.email}}</td>
+            <td> 
+              <button class="botao-acoes-editar" (click)="alterarUsuario(item)">Alterar</button>
+              <button class="botao-acoes-delete" (click)="remover(item.id!)">Remover</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>

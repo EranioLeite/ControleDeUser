@@ -1,0 +1,814 @@
+[2023-12-30 14:40:53.464 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 14:40:53.901 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 14:43:14.879 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 14:43:17.031 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 14:43:17.506 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 14:43:45.643 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("21,555"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [ControleDeUsuarios];"
+[2023-12-30 14:43:50.789 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("5,133"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ControleDeUsuarios] SET READ_COMMITTED_SNAPSHOT ON;
+END;"
+[2023-12-30 14:43:51.274 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("212"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 14:43:52.447 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("602"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);"
+[2023-12-30 14:43:52.453 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 14:43:52.683 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("209"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 14:43:53.435 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("734"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 14:43:56.938 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] Applying migration '"20220901134217_InitialCreateDBOQC"'.
+[2023-12-30 14:43:57.304 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("174"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Cadastro] (
+    [Id] bigint NOT NULL IDENTITY,
+    [nome] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Cadastro] PRIMARY KEY ([Id])
+);"
+[2023-12-30 14:43:57.377 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("56"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220901134217_InitialCreateDBOQC', N'6.0.8');"
+[2023-12-30 14:43:57.399 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] Applying migration '"20231230184054_migrationInicial"'.
+[2023-12-30 14:43:57.405 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231230184054_migrationInicial', N'6.0.8');"
+[2023-12-30 14:44:00.957 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 14:44:00.976 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 14:44:00.982 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 14:44:00.988 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 14:44:09.543 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger - -
+[2023-12-30 14:44:13.285 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger - - - 301 0 - 3755.3404ms
+[2023-12-30 14:44:13.413 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 14:44:13.964 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 550.3485ms
+[2023-12-30 14:44:14.047 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - -
+[2023-12-30 14:44:14.071 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 14:44:14.065 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - -
+[2023-12-30 14:44:14.050 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - -
+[2023-12-30 14:44:14.072 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 14:44:14.086 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 15.0877ms
+[2023-12-30 14:44:14.427 -04:00] [Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+[2023-12-30 14:44:14.435 -04:00] [Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+[2023-12-30 14:44:14.439 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - - - 200 143632 text/css 392.7457ms
+[2023-12-30 14:44:14.441 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 376.9211ms
+[2023-12-30 14:44:14.449 -04:00] [Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+[2023-12-30 14:44:14.453 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 402.9325ms
+[2023-12-30 14:44:14.727 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 655.0216ms
+[2023-12-30 14:44:14.832 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 14:44:14.931 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - -
+[2023-12-30 14:44:14.934 -04:00] [Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware] [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+[2023-12-30 14:44:14.938 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - - - 200 628 image/png 6.8987ms
+[2023-12-30 14:44:15.253 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 421.3899ms
+[2023-12-30 14:54:51.595 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 14:54:51.808 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:04:32.142 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 15:04:35.071 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 15:04:35.727 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:04:38.050 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("58"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:04:38.217 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("100"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:04:38.228 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:04:38.233 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:04:38.526 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("230"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 15:04:38.883 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] Applying migration '"20231230185452_migrationCreateUser"'.
+[2023-12-30 15:04:39.218 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("155"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Usuarios] (
+    [Id] bigint NOT NULL IDENTITY,
+    [nome] nvarchar(max) NOT NULL,
+    [sobrenome] nvarchar(max) NOT NULL,
+    [email] nvarchar(max) NOT NULL,
+    [senha] nvarchar(max) NOT NULL,
+    [nivelAcesso] int NOT NULL,
+    CONSTRAINT [PK_Usuarios] PRIMARY KEY ([Id])
+);"
+[2023-12-30 15:04:39.271 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231230185452_migrationCreateUser', N'6.0.8');"
+[2023-12-30 15:04:40.810 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 15:04:40.818 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 15:04:40.821 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 15:04:40.822 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 15:04:45.467 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 15:04:48.743 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 15:04:48.768 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 3305.6726ms
+[2023-12-30 15:04:48.868 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 15:04:48.879 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 11.1402ms
+[2023-12-30 15:04:49.102 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 358.9360ms
+[2023-12-30 15:04:49.209 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 15:04:49.689 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 480.2458ms
+[2023-12-30 15:13:09.920 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 15:13:11.195 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 15:13:11.628 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:13:12.995 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("68"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:13:13.107 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("70"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:13:13.119 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:13:13.127 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:13:13.285 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 15:13:13.370 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] No migrations were applied. The database is already up to date.
+[2023-12-30 15:13:13.942 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 15:13:13.950 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 15:13:13.952 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 15:13:13.955 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 15:13:14.969 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 15:13:15.495 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 530.5447ms
+[2023-12-30 15:13:15.523 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 15:13:15.527 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 15:13:15.537 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 10.2488ms
+[2023-12-30 15:13:15.621 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 97.5888ms
+[2023-12-30 15:13:15.670 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 15:13:15.925 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 254.1395ms
+[2023-12-30 15:13:26.200 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 15:13:26.273 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:13:26.737 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:13:26.840 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:13:28.109 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("52"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 15:13:28.171 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 15:13:28.226 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 1457.4682ms
+[2023-12-30 15:13:28.232 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:13:28.248 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 2047.9005ms
+[2023-12-30 15:39:22.610 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 15:39:23.444 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 15:39:23.631 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:39:24.029 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:39:24.072 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:39:24.078 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:39:24.080 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:39:24.099 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 15:39:24.126 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] No migrations were applied. The database is already up to date.
+[2023-12-30 15:39:24.361 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 15:39:24.364 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 15:39:24.365 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 15:39:24.365 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 15:39:26.237 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 15:39:26.544 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 15:39:26.542 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 297.2065ms
+[2023-12-30 15:39:26.560 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 15:39:26.567 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 6.9343ms
+[2023-12-30 15:39:26.622 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.0888ms
+[2023-12-30 15:39:26.664 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 15:39:26.774 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 110.5539ms
+[2023-12-30 15:41:22.995 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 POST http://localhost:5000/Usuarios application/json 128
+[2023-12-30 15:41:23.005 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 15:41:23.022 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)"'
+[2023-12-30 15:41:23.109 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PostUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PostUsuario(Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:41:23.321 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+[2023-12-30 15:41:23.369 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)" in 253.3635ms
+[2023-12-30 15:41:23.372 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)"'
+[2023-12-30 15:41:23.375 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 POST http://localhost:5000/Usuarios application/json 128 - 400 - application/problem+json;+charset=utf-8 380.1834ms
+[2023-12-30 15:41:32.591 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 POST http://localhost:5000/Usuarios application/json 129
+[2023-12-30 15:41:32.593 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 15:41:32.594 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)"'
+[2023-12-30 15:41:32.597 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PostUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PostUsuario(Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:41:32.622 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:41:33.148 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("169"ms) [Parameters=["@p0='eranioleite@gmail.com' (Nullable = false) (Size = 4000), @p1='0', @p2='Eranio' (Nullable = false) (Size = 4000), @p3='teste@2024' (Nullable = false) (Size = 4000), @p4='Leite' (Nullable = false) (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Usuarios] ([email], [nivelAcesso], [nome], [senha], [sobrenome])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Usuarios]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();"
+[2023-12-30 15:41:33.210 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 15:41:33.216 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)" in 616.3941ms
+[2023-12-30 15:41:33.218 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)"'
+[2023-12-30 15:41:33.222 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 POST http://localhost:5000/Usuarios application/json 129 - 200 - application/json;+charset=utf-8 631.5084ms
+[2023-12-30 15:41:44.897 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 15:41:44.924 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:41:44.936 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:41:44.986 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:41:45.346 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("127"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 15:41:45.355 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 15:41:45.357 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 418.0453ms
+[2023-12-30 15:41:45.361 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:41:45.362 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 465.6003ms
+[2023-12-30 15:42:42.498 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios/1 - -
+[2023-12-30 15:42:42.506 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuario (Kodigos.API)"'
+[2023-12-30 15:42:42.540 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] GetUsuario(Int64)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:42:42.578 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:42:43.019 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("46"ms) [Parameters=["@__id_0='1'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0"
+[2023-12-30 15:42:43.022 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 15:42:43.023 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuario (Kodigos.API)" in 478.8658ms
+[2023-12-30 15:42:43.024 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuario (Kodigos.API)"'
+[2023-12-30 15:42:43.025 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios/1 - - - 200 - application/json;+charset=utf-8 526.7741ms
+[2023-12-30 15:46:08.372 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 15:46:08.586 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:46:25.636 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 15:46:26.452 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 15:46:26.650 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:46:27.439 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:46:27.491 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:46:27.496 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:46:27.497 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:46:27.528 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 15:46:27.689 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] Applying migration '"20231230194608_migrationUpdateUser"'.
+[2023-12-30 15:46:27.741 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231230194608_migrationUpdateUser', N'6.0.8');"
+[2023-12-30 15:46:28.122 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 15:46:28.127 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 15:46:28.128 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 15:46:28.129 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 15:46:28.670 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 15:46:29.125 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 15:46:29.127 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 457.9270ms
+[2023-12-30 15:46:29.185 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 15:46:29.190 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 5.0274ms
+[2023-12-30 15:46:29.202 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 76.8109ms
+[2023-12-30 15:46:29.397 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 15:46:29.530 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 132.6349ms
+[2023-12-30 15:47:29.357 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 POST http://localhost:5000/Usuarios application/json 130
+[2023-12-30 15:47:29.363 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 15:47:29.375 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)"'
+[2023-12-30 15:47:29.411 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PostUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PostUsuario(Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:47:29.604 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:47:29.984 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("202"ms) [Parameters=["@p0='romualdocosta@gmail.com' (Nullable = false) (Size = 4000), @p1='1', @p2='Romualdo' (Nullable = false) (Size = 4000), @p3='test@2024' (Nullable = false) (Size = 4000), @p4='Costa' (Nullable = false) (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Usuarios] ([email], [nivelAcesso], [nome], [senha], [sobrenome])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Usuarios]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();"
+[2023-12-30 15:47:30.036 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 15:47:30.049 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)" in 629.3342ms
+[2023-12-30 15:47:30.051 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PostUsuario (Kodigos.API)"'
+[2023-12-30 15:47:30.059 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 POST http://localhost:5000/Usuarios application/json 130 - 200 - application/json;+charset=utf-8 702.5779ms
+[2023-12-30 15:47:45.728 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 15:47:45.730 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:47:45.737 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:47:45.795 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:47:46.251 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("197"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 15:47:46.259 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 15:47:46.261 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 520.0574ms
+[2023-12-30 15:47:46.263 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:47:46.264 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 535.5005ms
+[2023-12-30 15:55:27.839 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 15:55:29.188 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 15:55:29.393 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:55:29.985 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:55:30.171 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("165"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:55:30.177 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 15:55:30.179 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 15:55:30.242 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("41"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 15:55:30.286 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] No migrations were applied. The database is already up to date.
+[2023-12-30 15:55:30.535 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 15:55:30.541 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 15:55:30.542 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 15:55:30.543 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 15:55:31.453 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 15:55:32.362 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 913.5208ms
+[2023-12-30 15:55:32.368 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 15:55:32.402 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 15:55:32.410 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 7.7288ms
+[2023-12-30 15:55:32.564 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 196.1925ms
+[2023-12-30 15:55:32.722 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 15:55:32.850 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 127.8046ms
+[2023-12-30 15:55:45.876 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 15:55:45.885 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:55:45.907 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:55:45.918 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:55:46.444 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("206"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 15:55:46.513 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 15:55:46.525 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 608.8771ms
+[2023-12-30 15:55:46.527 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 15:55:46.534 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 658.1058ms
+[2023-12-30 15:56:54.310 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 135
+[2023-12-30 15:56:54.312 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 15:56:54.314 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:56:54.357 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PutUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PutUsuario(Int64, Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:56:54.488 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+[2023-12-30 15:56:54.509 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)" in 150.3042ms
+[2023-12-30 15:56:54.511 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:56:54.513 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 135 - 400 - application/problem+json;+charset=utf-8 203.0101ms
+[2023-12-30 15:57:26.899 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 135
+[2023-12-30 15:57:26.919 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 15:57:26.920 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:57:26.922 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PutUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PutUsuario(Int64, Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:57:26.928 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+[2023-12-30 15:57:26.929 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)" in 2.5216ms
+[2023-12-30 15:57:26.933 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:57:26.934 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 135 - 400 - application/problem+json;+charset=utf-8 38.3496ms
+[2023-12-30 15:57:52.149 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 135
+[2023-12-30 15:57:52.151 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 15:57:52.158 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:57:52.164 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PutUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PutUsuario(Int64, Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:57:52.170 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+[2023-12-30 15:57:52.175 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)" in 6.4363ms
+[2023-12-30 15:57:52.177 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:57:52.178 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 135 - 400 - application/problem+json;+charset=utf-8 29.3193ms
+[2023-12-30 15:59:09.589 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 130
+[2023-12-30 15:59:09.595 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 15:59:09.596 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:59:09.597 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PutUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PutUsuario(Int64, Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 15:59:36.409 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 15:59:36.945 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("258"ms) [Parameters=["@__id_0='1'"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE [u].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+[2023-12-30 15:59:37.105 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("3"ms) [Parameters=["@p0='eranioleite@gmail.com' (Nullable = false) (Size = 4000), @p1='2', @p2='Eranio' (Nullable = false) (Size = 4000), @p3='teste@2024' (Nullable = false) (Size = 4000), @p4='Leite' (Nullable = false) (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Usuarios] ([email], [nivelAcesso], [nome], [senha], [sobrenome])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Usuarios]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();"
+[2023-12-30 15:59:37.152 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 15:59:37.155 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)" in 27556.0057ms
+[2023-12-30 15:59:37.157 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 15:59:37.158 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 130 - 200 - application/json;+charset=utf-8 27569.1219ms
+[2023-12-30 16:00:00.564 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 16:00:00.565 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:00:00.566 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:00:00.570 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:00:00.742 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("167"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 16:00:00.778 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 16:00:00.779 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 210.3594ms
+[2023-12-30 16:00:00.780 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:00:00.781 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 217.8166ms
+[2023-12-30 16:04:08.387 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 156
+[2023-12-30 16:04:08.389 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 16:04:08.389 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 16:04:08.390 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PutUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PutUsuario(Int64, Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:04:13.074 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:04:13.116 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("34"ms) [Parameters=["@__id_0='1'"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE [u].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+[2023-12-30 16:04:13.220 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("95"ms) [Parameters=["@p5='1', @p0='eranioleite@gmail.com' (Nullable = false) (Size = 4000), @p1='0', @p2='Eranio' (Nullable = false) (Size = 4000), @p3='teste@2024' (Nullable = false) (Size = 4000), @p4='Leite' (Nullable = false) (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Usuarios] SET [email] = @p0, [nivelAcesso] = @p1, [nome] = @p2, [senha] = @p3, [sobrenome] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;"
+[2023-12-30 16:04:13.226 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 16:04:13.227 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)" in 4834.7246ms
+[2023-12-30 16:04:13.228 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 16:04:13.229 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 156 - 200 - application/json;+charset=utf-8 4842.4460ms
+[2023-12-30 16:04:25.899 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 16:04:25.901 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:04:25.903 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:04:25.911 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:04:25.915 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 16:04:25.918 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 16:04:25.920 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 10.3732ms
+[2023-12-30 16:04:25.923 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:04:25.924 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 25.1245ms
+[2023-12-30 16:04:48.820 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 156
+[2023-12-30 16:04:48.825 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 16:04:48.826 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 16:04:48.827 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"PutUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] PutUsuario(Int64, Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:04:48.830 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:04:48.836 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("4"ms) [Parameters=["@__id_0='1'"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE [u].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+[2023-12-30 16:04:48.871 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("31"ms) [Parameters=["@p5='1', @p0='eranioleite@gmail.com' (Nullable = false) (Size = 4000), @p1='2', @p2='Eranio' (Nullable = false) (Size = 4000), @p3='teste@2024' (Nullable = false) (Size = 4000), @p4='Leite' (Nullable = false) (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Usuarios] SET [email] = @p0, [nivelAcesso] = @p1, [nome] = @p2, [senha] = @p3, [sobrenome] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;"
+[2023-12-30 16:04:48.875 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 16:04:48.876 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)" in 46.6766ms
+[2023-12-30 16:04:48.877 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.PutUsuario (Kodigos.API)"'
+[2023-12-30 16:04:48.878 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 PUT http://localhost:5000/Usuarios/1 application/json 156 - 200 - application/json;+charset=utf-8 58.7611ms
+[2023-12-30 16:04:55.917 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 16:04:55.919 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:04:55.921 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:04:55.925 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:04:55.929 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 16:04:55.931 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 16:04:55.936 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 11.6552ms
+[2023-12-30 16:04:55.937 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:04:55.938 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 21.3097ms
+[2023-12-30 16:13:16.119 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 16:13:17.522 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 16:13:17.726 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:13:18.414 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 16:13:18.557 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("121"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 16:13:18.562 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 16:13:18.563 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 16:13:18.609 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 16:13:18.656 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] No migrations were applied. The database is already up to date.
+[2023-12-30 16:13:19.130 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 16:13:19.133 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 16:13:19.134 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 16:13:19.135 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 16:13:21.210 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 16:13:24.140 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 2933.4689ms
+[2023-12-30 16:13:24.295 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 16:13:24.300 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 4.9774ms
+[2023-12-30 16:13:24.302 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 16:13:24.360 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.1468ms
+[2023-12-30 16:13:24.452 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 16:13:24.595 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.7386ms
+[2023-12-30 16:15:03.274 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 DELETE http://localhost:5000/Usuarios/3 - -
+[2023-12-30 16:15:03.281 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 16:15:03.287 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.DeleteUsuario (Kodigos.API)"'
+[2023-12-30 16:15:03.317 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"DeleteUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] DeleteUsuario(Int64)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:15:03.447 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:15:04.042 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("62"ms) [Parameters=["@__id_0='3'"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE [u].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+[2023-12-30 16:15:04.090 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("2"ms) [Parameters=["@__id_0='3'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0"
+[2023-12-30 16:15:04.480 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 16:15:04.494 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.DeleteUsuario (Kodigos.API)" in 1166.9396ms
+[2023-12-30 16:15:04.495 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.DeleteUsuario (Kodigos.API)"'
+[2023-12-30 16:15:04.503 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 DELETE http://localhost:5000/Usuarios/3 - - - 200 - application/json;+charset=utf-8 1228.5112ms
+[2023-12-30 16:16:31.787 -04:00] [] [Information] Executing Migraitions Database
+[2023-12-30 16:16:32.625 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2023-12-30 16:16:32.826 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:16:33.420 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 16:16:33.541 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("96"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 16:16:33.546 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2023-12-30 16:16:33.548 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2023-12-30 16:16:33.580 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2023-12-30 16:16:33.623 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] No migrations were applied. The database is already up to date.
+[2023-12-30 16:16:33.802 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2023-12-30 16:16:33.805 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2023-12-30 16:16:33.806 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2023-12-30 16:16:33.806 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Eranio\TesteINDT\backend\Kodigos\src\Kodigos.API\"
+[2023-12-30 16:16:35.616 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2023-12-30 16:16:35.910 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 300.2408ms
+[2023-12-30 16:16:35.962 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2023-12-30 16:16:35.962 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2023-12-30 16:16:35.972 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 13758 application/javascript;+charset=utf-8 9.7364ms
+[2023-12-30 16:16:36.041 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.4091ms
+[2023-12-30 16:16:36.108 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2023-12-30 16:16:36.238 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 130.3264ms
+[2023-12-30 16:17:04.100 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 16:17:04.110 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:17:04.128 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:17:04.160 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:17:04.429 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 16:17:04.505 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 16:17:04.519 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 382.8632ms
+[2023-12-30 16:17:04.521 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:17:04.529 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 428.9499ms
+[2023-12-30 16:17:15.586 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 DELETE http://localhost:5000/Usuarios/3 - -
+[2023-12-30 16:17:15.589 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 16:17:15.591 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.DeleteUsuario (Kodigos.API)"'
+[2023-12-30 16:17:15.611 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"DeleteUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]] DeleteUsuario(Int64)" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:17:15.668 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:17:15.908 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("35"ms) [Parameters=["@__id_0='3'"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Usuarios] AS [u]
+        WHERE [u].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+[2023-12-30 16:17:15.919 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=["@__id_0='3'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]
+WHERE [u].[Id] = @__id_0"
+[2023-12-30 16:17:16.278 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("91"ms) [Parameters=["@p0='3'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [Usuarios]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;"
+[2023-12-30 16:17:16.317 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+[2023-12-30 16:17:16.323 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.DeleteUsuario (Kodigos.API)" in 709.7212ms
+[2023-12-30 16:17:16.325 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.DeleteUsuario (Kodigos.API)"'
+[2023-12-30 16:17:16.326 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 DELETE http://localhost:5000/Usuarios/3 - - - 200 - application/json;+charset=utf-8 740.5233ms
+[2023-12-30 16:17:43.936 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 16:17:43.938 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:17:43.939 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:17:43.942 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:17:44.022 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 16:17:44.024 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 16:17:44.026 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 84.8132ms
+[2023-12-30 16:17:44.028 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:17:44.049 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 112.2812ms
+[2023-12-30 16:56:51.531 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 16:56:51.533 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:56:51.534 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:56:51.538 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:56:51.702 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("69"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 16:56:51.705 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 16:56:51.706 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 168.9731ms
+[2023-12-30 16:56:51.708 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:56:51.709 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 177.7390ms
+[2023-12-30 16:57:05.602 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/Usuarios - -
+[2023-12-30 16:57:05.604 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:57:05.607 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 16:57:05.610 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 16:57:05.665 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("52"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 16:57:05.670 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 16:57:05.671 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 61.581ms
+[2023-12-30 16:57:05.672 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 16:57:05.673 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/Usuarios - - - 200 - application/json;+charset=utf-8 71.0806ms
+[2023-12-30 19:00:18.215 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+[2023-12-30 19:00:19.429 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 404 0 - 1233.5282ms
+[2023-12-30 19:00:47.642 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+[2023-12-30 19:00:47.755 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 404 0 - 113.3088ms
+[2023-12-30 19:01:01.905 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - -
+[2023-12-30 19:01:02.020 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 19:01:02.056 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 19:01:02.060 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 19:01:02.483 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("248"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 19:01:02.648 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 19:01:02.659 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 600.6288ms
+[2023-12-30 19:01:02.662 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 19:01:02.663 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - - - 200 - application/json;+charset=utf-8 757.7054ms
+[2023-12-30 20:57:37.720 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000//usuarios - 0
+[2023-12-30 20:57:38.475 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000//usuarios - 0 - 404 0 - 999.5032ms
+[2023-12-30 20:57:38.811 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000//usuarios - -
+[2023-12-30 20:57:39.172 -04:00] [Microsoft.AspNetCore.Cors.Infrastructure.CorsService] [Information] CORS policy execution successful.
+[2023-12-30 20:57:39.384 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000//usuarios - - - 404 0 - 572.8407ms
+[2023-12-30 20:57:54.224 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 20:57:54.337 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 20:57:54.550 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 20:57:54.845 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 20:57:56.611 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("945"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 20:57:56.783 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 20:57:56.896 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 2342.1649ms
+[2023-12-30 20:57:56.898 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 20:57:56.919 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 2773.7781ms
+[2023-12-30 23:24:00.613 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:24:00.617 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:24:00.634 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:24:00.812 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:24:01.446 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("241"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:24:01.497 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:24:01.559 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 907.2468ms
+[2023-12-30 23:24:01.617 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:24:01.622 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 1009.0359ms
+[2023-12-30 23:26:10.403 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:26:10.428 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:26:10.434 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:26:10.452 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:26:10.553 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("82"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:26:10.582 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:26:10.621 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 171.181ms
+[2023-12-30 23:26:10.644 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:26:10.649 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 246.7132ms
+[2023-12-30 23:27:45.651 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:27:45.684 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:27:45.779 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:27:45.784 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:27:45.894 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("56"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:27:45.945 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:27:45.969 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 185.3993ms
+[2023-12-30 23:27:45.972 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:27:45.974 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 325.0317ms
+[2023-12-30 23:28:17.359 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:28:17.371 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:28:17.376 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:28:17.385 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:28:17.468 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("76"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:28:17.483 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:28:17.510 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 126.9355ms
+[2023-12-30 23:28:17.512 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:28:17.514 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 155.5212ms
+[2023-12-30 23:29:06.343 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:29:06.345 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:29:06.347 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:29:06.353 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:29:06.492 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("134"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:29:06.495 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:29:06.497 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 144.2026ms
+[2023-12-30 23:29:06.498 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:29:06.500 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 156.7449ms
+[2023-12-30 23:29:08.475 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:29:08.479 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:29:08.484 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:29:08.495 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:29:08.576 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:29:08.665 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:29:08.715 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 221.397ms
+[2023-12-30 23:29:08.723 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:29:08.731 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 256.2928ms
+[2023-12-30 23:36:28.457 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:36:28.486 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:36:28.488 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:36:28.494 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:36:28.710 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("126"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:36:28.716 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:36:28.736 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 243.3047ms
+[2023-12-30 23:36:28.741 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:36:28.745 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 287.8417ms
+[2023-12-30 23:37:02.255 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:37:02.264 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:37:02.267 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:37:02.303 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:37:02.378 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("59"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:37:02.388 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:37:02.398 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 125.577ms
+[2023-12-30 23:37:02.420 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:37:02.426 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 171.0581ms
+[2023-12-30 23:37:58.363 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:37:58.377 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:37:58.385 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:37:58.402 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:37:58.514 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("93"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:37:58.545 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:37:58.569 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 170.275ms
+[2023-12-30 23:37:58.575 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:37:58.581 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 219.8723ms
+[2023-12-30 23:43:57.425 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:43:57.541 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:43:57.545 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:43:57.552 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:43:57.695 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("59"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:43:57.702 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:43:57.706 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 156.087ms
+[2023-12-30 23:43:57.710 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:43:57.713 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 288.2006ms
+[2023-12-30 23:49:11.331 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:49:11.333 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:49:11.335 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:49:11.340 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:49:11.462 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("82"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:49:11.472 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:49:11.484 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 146.6788ms
+[2023-12-30 23:49:11.485 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:49:11.487 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 155.3747ms
+[2023-12-30 23:51:35.273 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:51:35.275 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:51:35.277 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:51:35.281 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:51:35.435 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("151"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:51:35.451 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:51:35.459 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 178.5757ms
+[2023-12-30 23:51:35.466 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:51:35.471 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 198.3460ms
+[2023-12-30 23:52:14.211 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:52:14.226 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:52:14.229 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:52:14.234 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:52:14.291 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:52:14.296 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:52:14.298 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 64.5816ms
+[2023-12-30 23:52:14.299 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:52:14.330 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 119.2425ms
+[2023-12-30 23:52:57.457 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:52:57.465 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:52:57.467 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:52:57.475 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:52:57.520 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:52:57.530 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:52:57.552 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 78.7496ms
+[2023-12-30 23:52:57.560 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:52:57.571 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 113.2955ms
+[2023-12-30 23:55:49.271 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:55:49.333 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:55:49.486 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:55:49.491 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:55:49.555 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("61"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:55:49.574 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:55:49.577 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 86.2195ms
+[2023-12-30 23:55:49.579 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:55:49.580 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 309.5912ms
+[2023-12-30 23:56:25.464 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:56:25.468 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:56:25.471 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:56:25.504 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:56:25.579 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("67"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:56:25.583 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:56:25.587 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 83.6386ms
+[2023-12-30 23:56:25.591 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:56:25.594 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 130.0421ms
+[2023-12-30 23:56:30.357 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/usuarios - 0
+[2023-12-30 23:56:30.359 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executing endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:56:30.360 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Route matched with "{action = \"GetUsuarios\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Kodigos.Infra.Core.KRetorno`1[System.Collections.Generic.List`1[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO]]] GetUsuarios()" on controller "Kodigos.API.Controllers.Usuarios.UsuariosController" ("Kodigos.API").
+[2023-12-30 23:56:30.363 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2023-12-30 23:56:30.446 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[email], [u].[nivelAcesso], [u].[nome], [u].[senha], [u].[sobrenome]
+FROM [Usuarios] AS [u]"
+[2023-12-30 23:56:30.484 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor] [Information] Executing "ObjectResult", writing value of type '"Kodigos.Infra.Core.KRetorno`1[[System.Collections.Generic.List`1[[Kodigos.Dominio.ModelsData.Usuarios.UsuariosDTO, Kodigos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+[2023-12-30 23:56:30.487 -04:00] [Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker] [Information] Executed action "Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)" in 123.7385ms
+[2023-12-30 23:56:30.488 -04:00] [Microsoft.AspNetCore.Routing.EndpointMiddleware] [Information] Executed endpoint '"Kodigos.API.Controllers.Usuarios.UsuariosController.GetUsuarios (Kodigos.API)"'
+[2023-12-30 23:56:30.490 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/usuarios - 0 - 200 - application/json;+charset=utf-8 133.0377ms

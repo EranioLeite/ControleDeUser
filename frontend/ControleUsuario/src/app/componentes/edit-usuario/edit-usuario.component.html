@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="card">
+        <h3 [ngStyle]="{'margin-left':'30%', 'color':'blue'}">Atualizar os dados do Usuário</h3>
+        <p [ngStyle]="{'margin-left':'10%'}">Informe os dados do usuário</p>
+        <form class="cardform" [formGroup]="formulario" (ngSubmit)="onSubmit(formulario.value)" #formDir="ngForm">
+            <div class="campo-formulario">
+                <label>Nome</label>
+                <input formControlName="nome" type="text">
+            </div>
+            <div class="campo-formulario">
+                <label>Sobrenome</label>
+                <input formControlName="sobrenome" type="text">
+            </div>
+            <div class="campo-formulario">
+                <label>E-mail</label>
+                <input formControlName="email" type="email">
+                <div *ngIf="formulario.controls['email'].invalid && (formulario.controls['email'].dirty || formulario.controls['email'].touched)">
+                    <div [ngStyle]="{'color':'red'}" *ngIf="formulario.controls['email'].errors?.['required']">
+                            E-mail é um campo obrigatório.
+                    </div>
+                    <div [ngStyle]="{'color':'red'}" *ngIf="formulario.controls['email'].errors?.['email']">
+                            E-mail inválido.
+                    </div>
+                </div>
+            </div>
+            <div class="campo-formulario">
+                <label>Senha </label>
+                <input formControlName="senha" type="password">
+                <div *ngIf="formulario.controls['senha'].invalid && (formulario.controls['senha'].dirty || formulario.controls['senha'].touched)">
+                    <div [ngStyle]="{'color':'red'}" *ngIf="formulario.controls['senha'].errors?.['required']">
+                            Senha é um campo obrigatória.
+                    </div>
+                </div>
+            </div>
+            <div class="campo-formulario">
+                <label>Tipo de Usuário</label>
+                <select class="form-select" formControlName="nivelAcesso">
+                    <option *ngFor="let tipo of tiposAcesso" [value]="tipo.valor">
+                      {{tipo.nome}}
+                    </option>
+                </select>
+            </div>
+            
+            <div class="div-button">
+                <button  (click)="voltar()"  >Voltar</button>
+                <button  type="submit" [disabled]="formulario.invalid" >{{botao}}</button>
+            </div>
+            <br/>
+        </form>
+    </div>
+</div>

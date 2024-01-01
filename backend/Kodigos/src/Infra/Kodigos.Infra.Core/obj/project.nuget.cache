@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "E1IZD1aDywCB9uWlsPi6NwJ/YCXjUJo4twzvkQak7xZe9RwG8S2a7EjpsVjAIloA4oFkFfGiwSMrri6xQ2JGpQ==",
+  "success": true,
+  "projectFilePath": "C:\\Eranio\\TesteINDT\\backend\\Kodigos\\src\\Infra\\Kodigos.Infra.Core\\Kodigos.Infra.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Romualdo\\.nuget\\packages\\system.directoryservices\\8.0.0\\system.directoryservices.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

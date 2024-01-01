@@ -1,0 +1,63 @@
+.container {
+    align-items: center;
+    width: 95%; 
+}
+table {
+    margin-left: 2%;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid gray; /* Cor da borda da tabela, cabeçalho e células */
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #3925a1; /* Cor de fundo do cabeçalho */
+  color: white; /* Cor do texto do cabeçalho */
+}
+.title-page{
+  margin-left: 2%;
+}
+button {
+    padding: 0.5em 1em;
+    background-color: #3925a1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    background-color: #3e6794;
+  }
+  .botao-acoes-editar {
+    background-color: #4CAF50; /* Cor de fundo */
+    border: none; /* Sem borda */
+    color: white; /* Cor do texto */
+    padding: 5px 22px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Sem sublinhado */
+    display: inline-block; /* Exibição em linha */
+    font-size: 14px; /* Tamanho da fonte */
+    margin: 2px 1px; /* Margem */
+    cursor: pointer; /* Cursor do mouse */
+  }
+  .botao-acoes-delete {
+    background-color: red; /* Cor de fundo */
+    border: none; /* Sem borda */
+    color: white; /* Cor do texto */
+    padding: 5px 22px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Sem sublinhado */
+    display: inline-block; /* Exibição em linha */
+    font-size: 14px; /* Tamanho da fonte */
+    margin: 2px 1px; /* Margem */
+    cursor: pointer; /* Cursor do mouse */
+  }
