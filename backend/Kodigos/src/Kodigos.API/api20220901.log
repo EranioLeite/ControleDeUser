@@ -1,0 +1,60 @@
+[2022-09-01 08:29:53.638 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2022-09-01 08:29:53.764 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.6" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.6"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2022-09-01 09:05:22.679 -04:00] [] [Information] Executing Migraitions Database
+[2022-09-01 09:05:23.485 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2022-09-01 09:05:23.642 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.6" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.6"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2022-09-01 09:10:45.882 -04:00] [] [Information] Executing Migraitions Database
+[2022-09-01 09:10:46.398 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2022-09-01 09:10:46.538 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.6" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.6"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2022-09-01 09:15:37.969 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2022-09-01 09:15:38.081 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2022-09-01 09:42:17.650 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2022-09-01 09:42:17.787 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2022-09-01 09:42:27.817 -04:00] [] [Information] Executing Migraitions Database
+[2022-09-01 09:42:28.488 -04:00] [Microsoft.EntityFrameworkCore.Model.Validation] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[2022-09-01 09:42:28.629 -04:00] [Microsoft.EntityFrameworkCore.Infrastructure] [Information] Entity Framework Core "6.0.8" initialized '"KodigosContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"6.0.8"' with options: "SensitiveDataLoggingEnabled MigrationsAssembly=Kodigos.API "
+[2022-09-01 09:42:30.488 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("270"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [OQC];"
+[2022-09-01 09:42:30.565 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [OQC] SET READ_COMMITTED_SNAPSHOT ON;
+END;"
+[2022-09-01 09:42:30.586 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2022-09-01 09:42:30.671 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);"
+[2022-09-01 09:42:30.675 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+[2022-09-01 09:42:30.699 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[2022-09-01 09:42:30.708 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[2022-09-01 09:42:30.767 -04:00] [Microsoft.EntityFrameworkCore.Migrations] [Information] Applying migration '"20220901134217_InitialCreateDBOQC"'.
+[2022-09-01 09:42:30.797 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Cadastro] (
+    [Id] bigint NOT NULL IDENTITY,
+    [nome] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Cadastro] PRIMARY KEY ([Id])
+);"
+[2022-09-01 09:42:30.802 -04:00] [Microsoft.EntityFrameworkCore.Database.Command] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220901134217_InitialCreateDBOQC', N'6.0.8');"
+[2022-09-01 09:42:31.273 -04:00] [Microsoft.Hosting.Lifetime] [Information] Now listening on: "http://localhost:5000"
+[2022-09-01 09:42:31.276 -04:00] [Microsoft.Hosting.Lifetime] [Information] Application started. Press Ctrl+C to shut down.
+[2022-09-01 09:42:31.277 -04:00] [Microsoft.Hosting.Lifetime] [Information] Hosting environment: "Development"
+[2022-09-01 09:42:31.278 -04:00] [Microsoft.Hosting.Lifetime] [Information] Content root path: "C:\Projetos\oqc\back_oqc\Kodigos\src\Kodigos.API\"
+[2022-09-01 09:42:31.952 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+[2022-09-01 09:42:32.322 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 372.0292ms
+[2022-09-01 09:42:32.353 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - -
+[2022-09-01 09:42:32.358 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.0231ms
+[2022-09-01 09:42:32.396 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/_vs/browserLink - -
+[2022-09-01 09:42:32.466 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 69.7999ms
+[2022-09-01 09:42:32.624 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+[2022-09-01 09:42:32.706 -04:00] [Microsoft.AspNetCore.Hosting.Diagnostics] [Information] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 81.3687ms

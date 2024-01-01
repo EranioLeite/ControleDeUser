@@ -1,0 +1,9 @@
+.barra-menu {
+    background-color: #3925a1;
+    overflow: hidden;
+    width: 100%;
+}
+.barra-title{
+  color: white;
+  margin-left: 1%;
+}
